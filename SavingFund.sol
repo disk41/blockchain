@@ -13,8 +13,7 @@ contract SavingFund {
     // define Kid
     struct Kid {
         address payable walletAddress;
-        string firstName;
-        string lastName;
+        string name;
         uint releaseTime;
         uint amount;
         bool canWithdraw;
@@ -28,11 +27,10 @@ contract SavingFund {
     }
 
     // add kid to contract
-    function addKid(address payable walletAddress, string memory firstName, string memory lastName, uint releaseTime, uint amount, bool canWithdraw) public onlyOwner {
+    function addKid(address payable walletAddress, string memory name, uint releaseTime, uint amount, bool canWithdraw) public onlyOwner {
         kids.push(Kid(
             walletAddress,
-            firstName,
-            lastName,
+            name,
             releaseTime,
             amount,
             canWithdraw
