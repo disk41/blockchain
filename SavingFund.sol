@@ -61,7 +61,7 @@ contract SavingFund {
                 return i;
             }
         }
-        return 999;
+        return -1;
     }
 
     // kid checks if able to withdraw
